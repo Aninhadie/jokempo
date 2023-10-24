@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="jogar"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imagepedra"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:onClick="jogar"
+        app:layout_constraintEnd_toStartOf="@+id/imagepapel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imagepapel"
+        app:srcCompat="@drawable/pedra" />
+
+    <ImageView
+        android:id="@+id/imagepapel"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        android:onClick="jogar"
+        app:layout_constraintEnd_toStartOf="@+id/imagetesoura"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imagepedra"
+        app:layout_constraintTop_toBottomOf="@+id/imagepadrao"
+        app:srcCompat="@drawable/papel" />
+
+    <ImageView
+        android:id="@+id/imagetesoura"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:onClick="jogar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imagepapel"
+        app:layout_constraintTop_toTopOf="@+id/imagepapel"
+        app:srcCompat="@drawable/tesoura" />
+
+    <ImageView
+        android:id="@+id/imagepadrao"
+        android:layout_width="126dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/padrao" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="244dp"
+        android:layout_height="368dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textresultado"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textresultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="casual"
+        android:text="Escolha sua jogada"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#108A33"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagepapel" />
+</androidx.constraintlayout.widget.ConstraintLayout>
